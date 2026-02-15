@@ -127,17 +127,44 @@
                             <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
   <span class="property">name</span>: <span class="string">"Md Khayrul Hasan"</span>,
   <span class="property">title</span>: <span class="string">"Senior Full Stack Specialist"</span>,
+  <span class="property">role</span>: <span class="string">"Lead Consultant"</span>,
   <span class="property">location</span>: <span class="string">"Dhaka, Bangladesh"</span>,
   <span class="property">experience</span>: <span class="number">12</span>,
   <span class="property">email</span>: <span class="string">"mdhasankhayrul@gmail.com"</span>,
   <span class="property">linkedin</span>: <span class="string">"md-khayrul-hasan"</span>,
   <span class="property">github</span>: <span class="string">"me-hasan"</span>,
-  <span class="property">specialization</span>: [
-    <span class="string">"React.js"</span>,
-    <span class="string">"Node.js"</span>,
-    <span class="string">"TypeScript"</span>,
-    <span class="string">"AWS"</span>,
-    <span class="string">"Python/Django"</span>
+  <span class="property">expertise</span>: {
+    <span class="property">frontend</span>: [
+      <span class="string">"React.js"</span>,
+      <span class="string">"TypeScript"</span>,
+      <span class="string">"Next.js"</span>,
+      <span class="string">"Angular"</span>
+    ],
+    <span class="property">backend</span>: [
+      <span class="string">"Node.js"</span>,
+      <span class="string">"Nest.js"</span>,
+      <span class="string">"PHP/Laravel"</span>,
+      <span class="string">"Java/Spring Boot"</span>,
+      <span class="string">"Python/Django"</span>
+    ],
+    <span class="property">cloud</span>: [
+      <span class="string">"AWS"</span>,
+      <span class="string">"Docker"</span>,
+      <span class="string">"Kubernetes"</span>,
+      <span class="string">"CI/CD"</span>
+    ],
+    <span class="property">database</span>: [
+      <span class="string">"PostgreSQL"</span>,
+      <span class="string">"MongoDB"</span>,
+      <span class="string">"Redis"</span>,
+      <span class="string">"DynamoDB"</span>
+    ]
+  },
+  <span class="property">passions</span>: [
+    <span class="string">"Clean Architecture"</span>,
+    <span class="string">"Microservices"</span>,
+    <span class="string">"Team Leadership"</span>,
+    <span class="string">"Continuous Learning"</span>
   ]
 };</code></pre>
                         </div>
@@ -147,31 +174,44 @@
                     <h3>Software Engineer & Lead Consultant</h3>
                     <p>
                         Senior Full Stack Specialist with over 12 years of experience in software development,
-                        specializing in React.js, TypeScript, Node.js, PHP, and Java. Currently working at Alitisal Aljadeed
-                        as a Lead Consultant, providing technical leadership and strategic guidance for software development initiatives.
+                        specializing in modern web technologies and cloud architecture. Currently serving as a Lead Consultant
+                        at Alitisal Aljadeed, providing technical leadership and strategic guidance for complex software development initiatives.
                     </p>
                     <p>
-                        Expert in building scalable server-side applications using Node.js (Nest.js, Express),
-                        PHP (Laravel, Symfony), and Java (Spring Boot). Proven track record of delivering high-quality
-                        software solutions, leading development teams, and optimizing application performance.
-                        Strong advocate for clean code, best practices, and continuous learning.
+                        Expertise spans the full software development lifecycle - from frontend development with React.js,
+                        TypeScript, and Next.js to backend engineering with Node.js, PHP (Laravel, Symfony), and Java (Spring Boot).
+                        Proven track record of architecting and delivering scalable microservices solutions, implementing DevOps best practices,
+                        and leading high-performance development teams.
+                    </p>
+                    <p>
+                        Strong advocate for clean architecture, SOLID principles, and continuous improvement. Successfully delivered
+                        mission-critical projects for government agencies, financial institutions, and enterprise clients, with a focus
+                        on performance optimization, security implementation, and cloud cost reduction.
                     </p>
                     <div class="about-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Frontend: React, TypeScript, Next.js</span>
+                            <span>Frontend: React, TypeScript, Next.js, Angular</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Backend: Node.js, PHP, Java, Python</span>
+                            <span>Backend: Node.js, Nest.js, PHP, Java, Python</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Cloud: AWS, Docker, Kubernetes</span>
+                            <span>Cloud: AWS, Docker, Kubernetes, CI/CD</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
-                            <span>Leadership & Consulting</span>
+                            <span>Database: PostgreSQL, MongoDB, Redis, DynamoDB</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>APIs: REST, GraphQL, WebSocket, Kafka</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Leadership & Technical Consulting</span>
                         </div>
                     </div>
                 </div>
@@ -540,42 +580,240 @@
 
             <div class="tech-stack">
                 <h3>Tech Stack</h3>
-                <div class="stack-icons">
-                    <div class="stack-item" title="React">
-                        <i class="fab fa-react"></i>
+                <p class="tech-stack-description">Technologies and tools I use to bring ideas to life</p>
+
+                <!-- Frontend Stack -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-laptop-code"></i> Frontend Development
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="React.js">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="stack-item" title="TypeScript">
+                            <i class="fab fa-js-square"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="stack-item" title="Next.js">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="stack-item" title="Angular">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular</span>
+                        </div>
+                        <div class="stack-item" title="HTML5">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="stack-item" title="CSS3">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="stack-item" title="Tailwind CSS">
+                            <i class="fas fa-wind"></i>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="stack-item" title="Redux">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Redux</span>
+                        </div>
                     </div>
-                    <div class="stack-item" title="Node.js">
-                        <i class="fab fa-node-js"></i>
+                </div>
+
+                <!-- Backend Stack -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-server"></i> Backend Development
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="Node.js">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="stack-item" title="Nest.js">
+                            <i class="fas fa-cubes"></i>
+                            <span>Nest.js</span>
+                        </div>
+                        <div class="stack-item" title="Express.js">
+                            <i class="fas fa-server"></i>
+                            <span>Express</span>
+                        </div>
+                        <div class="stack-item" title="PHP">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="stack-item" title="Laravel">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="stack-item" title="Java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="stack-item" title="Spring Boot">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="stack-item" title="Python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="stack-item" title="Django">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Django</span>
+                        </div>
                     </div>
-                    <div class="stack-item" title="Python">
-                        <i class="fab fa-python"></i>
+                </div>
+
+                <!-- Database Stack -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-database"></i> Databases & Caching
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="PostgreSQL">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="stack-item" title="MySQL">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="stack-item" title="MongoDB">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="stack-item" title="Redis">
+                            <i class="fas fa-bolt"></i>
+                            <span>Redis</span>
+                        </div>
+                        <div class="stack-item" title="DynamoDB">
+                            <i class="fas fa-table"></i>
+                            <span>DynamoDB</span>
+                        </div>
+                        <div class="stack-item" title="Oracle">
+                            <i class="fas fa-database"></i>
+                            <span>Oracle</span>
+                        </div>
                     </div>
-                    <div class="stack-item" title="AWS">
-                        <i class="fab fa-aws"></i>
+                </div>
+
+                <!-- DevOps & Cloud -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-cloud"></i> DevOps & Cloud
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="AWS">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="stack-item" title="Docker">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="stack-item" title="Kubernetes">
+                            <i class="fas fa-dharmachakra"></i>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="stack-item" title="GitHub Actions">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Actions</span>
+                        </div>
+                        <div class="stack-item" title="Jenkins">
+                            <i class="fab fa-jenkins"></i>
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="stack-item" title="Bitbucket">
+                            <i class="fab fa-bitbucket"></i>
+                            <span>Bitbucket</span>
+                        </div>
+                        <div class="stack-item" title="Linux">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="stack-item" title="Nginx">
+                            <i class="fas fa-compass"></i>
+                            <span>Nginx</span>
+                        </div>
                     </div>
-                    <div class="stack-item" title="Docker">
-                        <i class="fab fa-docker"></i>
+                </div>
+
+                <!-- API & Integration -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-plug"></i> APIs & Integration
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="REST API">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>REST API</span>
+                        </div>
+                        <div class="stack-item" title="GraphQL">
+                            <i class="fas fa-circle"></i>
+                            <span>GraphQL</span>
+                        </div>
+                        <div class="stack-item" title="WebSocket">
+                            <i class="fas fa-sync"></i>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="stack-item" title="Apache Kafka">
+                            <i class="fas fa-stream"></i>
+                            <span>Kafka</span>
+                        </div>
                     </div>
-                    <div class="stack-item" title="Git">
-                        <i class="fab fa-git-alt"></i>
+                </div>
+
+                <!-- Monitoring & Security -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-shield-alt"></i> Monitoring & Security
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="ELK Stack">
+                            <i class="fas fa-search"></i>
+                            <span>ELK Stack</span>
+                        </div>
+                        <div class="stack-item" title="JWT">
+                            <i class="fas fa-key"></i>
+                            <span>JWT</span>
+                        </div>
+                        <div class="stack-item" title="OAuth">
+                            <i class="fas fa-lock"></i>
+                            <span>OAuth</span>
+                        </div>
+                        <div class="stack-item" title="SSL/TLS">
+                            <i class="fas fa-lock"></i>
+                            <span>SSL/TLS</span>
+                        </div>
                     </div>
-                    <div class="stack-item" title="JavaScript">
-                        <i class="fab fa-js-square"></i>
-                    </div>
-                    <div class="stack-item" title="HTML5">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <div class="stack-item" title="PHP">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <div class="stack-item" title="Java">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <div class="stack-item" title="Angular">
-                        <i class="fab fa-angular"></i>
-                    </div>
-                    <div class="stack-item" title="Bootstrap">
-                        <i class="fab fa-bootstrap"></i>
+                </div>
+
+                <!-- Tools & Version Control -->
+                <div class="stack-category">
+                    <h4 class="stack-category-title">
+                        <i class="fas fa-tools"></i> Tools & Version Control
+                    </h4>
+                    <div class="stack-items">
+                        <div class="stack-item" title="Git">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="stack-item" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="stack-item" title="Jira">
+                            <i class="fab fa-jira"></i>
+                            <span>Jira</span>
+                        </div>
+                        <div class="stack-item" title="VS Code">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
                     </div>
                 </div>
             </div>
