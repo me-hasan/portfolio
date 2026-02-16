@@ -2,8 +2,8 @@
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
-// Check for saved theme preference or default to light
-const currentTheme = localStorage.getItem('theme') || 'light';
+// Check for saved theme preference or default to dark (moon)
+const currentTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', currentTheme);
 updateThemeIcon(currentTheme);
 
@@ -16,7 +16,7 @@ themeToggle.addEventListener('click', () => {
 
 function updateThemeIcon(theme) {
     const icon = themeToggle.querySelector('i');
-    icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+    icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
 }
 
 // Mobile Navigation
