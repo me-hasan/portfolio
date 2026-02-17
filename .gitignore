@@ -1,0 +1,19 @@
+# LaTeX Resume and Cover Letter
+resume.tex
+resume.pdf
+resume.aux
+resume.log
+resume.out
+resume.synctex.gz
+cover-letter.tex
+cover-letter.pdf
+cover-letter.aux
+cover-letter.log
+cover-letter.out
+cover-letter.synctex.gz
+
+# LinkedIn Profile
+linkedin-profile.md
+
+# Keep the HTML resume for easy PDF generation
+!resume.html
