@@ -20,3 +20,4 @@ linkedin-profile.md
 
 # Environment and config files (contains sensitive data)
 .env
+config.js

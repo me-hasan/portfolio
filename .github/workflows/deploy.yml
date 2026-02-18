@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Inject secrets into config.js
+        run: |
+          sed -e "s|%EMAILJS_SERVICE_ID%|${{ secrets.EMAILJS_SERVICE_ID }}|g" \
+              -e "s|%EMAILJS_TEMPLATE_ID%|${{ secrets.EMAILJS_TEMPLATE_ID }}|g" \
+              -e "s|%EMAILJS_PUBLIC_KEY%|${{ secrets.EMAILJS_PUBLIC_KEY }}|g" \
+              config.template.js > config.js
+
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
