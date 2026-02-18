@@ -379,6 +379,30 @@ body {
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
 }
 
+.btn-resume {
+    background: linear-gradient(135deg, var(--secondary-color), #e8b84a);
+    color: var(--text-inverse);
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+}
+
+.btn-resume:hover {
+    background: linear-gradient(135deg, #d4a020, var(--secondary-color));
+    color: var(--text-inverse);
+    box-shadow: 0 10px 30px rgba(201, 162, 39, 0.5);
+    transform: translateY(-3px);
+}
+
+.btn-resume i {
+    animation: downloadBounce 2s ease-in-out infinite;
+}
+
+@keyframes downloadBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
 .hero-stats {
     display: flex;
     gap: 3rem;
@@ -661,6 +685,78 @@ section {
 
 .highlight-item i {
     color: var(--accent-color);
+}
+
+/* Resume Download Card */
+.resume-download-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.75rem;
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.15), rgba(0, 212, 255, 0.1));
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.resume-download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.resume-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--secondary-color), #e8b84a);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-inverse);
+    font-size: 2rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(201, 162, 39, 0.4);
+}
+
+.resume-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.resume-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.btn-resume-sm {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: linear-gradient(135deg, var(--secondary-color), #e8b84a);
+    color: var(--text-inverse);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+}
+
+.btn-resume-sm:hover {
+    background: linear-gradient(135deg, #d4a020, var(--secondary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(201, 162, 39, 0.4);
+}
+
+.btn-resume-sm i {
+    animation: downloadBounce 2s ease-in-out infinite;
 }
 
 /* Skills Section */
@@ -1737,6 +1833,16 @@ section {
 
     .hero-buttons {
         flex-direction: column;
+    }
+
+    .resume-download-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .resume-info {
+        width: 100%;
     }
 
     .hero-stats {
