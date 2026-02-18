@@ -17,3 +17,7 @@ linkedin-profile.md
 
 # Keep the HTML resume for easy PDF generation
 !resume.html
+
+# Environment and config files (contains sensitive data)
+config.js
+.env

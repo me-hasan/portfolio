@@ -163,22 +163,86 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission
+// Form submission with EmailJS
 const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const formStatus = document.getElementById('formStatus');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Check if EmailJS config is set
+    if (typeof CONFIG === 'undefined' || !CONFIG.emailjs) {
+        showStatus('Please configure EmailJS in config.js', 'error');
+        return;
+    }
+
+    const { serviceId, templateId, publicKey } = CONFIG.emailjs;
+
+    if (!serviceId || serviceId === 'YOUR_SERVICE_ID' ||
+        !templateId || templateId === 'YOUR_TEMPLATE_ID' ||
+        !publicKey || publicKey === 'YOUR_PUBLIC_KEY') {
+        showStatus('Please configure your EmailJS credentials in config.js', 'error');
+        return;
+    }
+
+    // Get form data
     const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+    const templateParams = {
+        from_name: formData.get('name'),
+        reply_to: formData.get('email'),
+        subject: formData.get('subject') || 'New Contact Form Submission',
+        message: formData.get('message'),
+        to_email: 'mdhasankhayrul@gmail.com'
+    };
 
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', data);
+    // Disable submit button and show loading state
+    submitBtn.disabled = true;
+    const originalBtnContent = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
+    showStatus('', '');
 
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
+    try {
+        // Initialize EmailJS
+        emailjs.init(publicKey);
+
+        // Send email
+        const response = await emailjs.send(serviceId, templateId, templateParams);
+
+        if (response.status === 200) {
+            showStatus('Thank you for your message! I will get back to you soon.', 'success');
+            contactForm.reset();
+        } else {
+            showStatus('Something went wrong. Please try again.', 'error');
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        showStatus('Failed to send message. Please try again or contact directly via email.', 'error');
+    } finally {
+        // Re-enable submit button and restore original content
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnContent;
+    }
 });
+
+function showStatus(message, type) {
+    formStatus.textContent = message;
+    formStatus.className = 'form-status';
+
+    if (type === 'success') {
+        formStatus.classList.add('success');
+    } else if (type === 'error') {
+        formStatus.classList.add('error');
+    }
+
+    // Auto-hide success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+        }, 5000);
+    }
+}
 
 // Add animation classes
 const style = document.createElement('style');
