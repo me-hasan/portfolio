@@ -19,5 +19,4 @@ linkedin-profile.md
 !resume.html
 
 # Environment and config files (contains sensitive data)
-config.js
 .env
