@@ -20,4 +20,21 @@ linkedin-profile.md
 
 # Environment and config files (contains sensitive data)
 .env
-config.js
+config.template.js
+
+# Node modules
+node_modules/
+
+# Heroku
+.heroku/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
